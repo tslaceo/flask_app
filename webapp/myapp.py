@@ -38,7 +38,7 @@ def create_product():
 
 @app.route('/product/<int:id>', methods=['PUT'])
 def update_product(id):
-    product = Product.query.get(id)
+    product = db.session.query(Product).get(id)
     if product:
         data = request.get_json()
         product.name = data['name']
