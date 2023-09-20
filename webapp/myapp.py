@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-# Update with your password
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flaskuser:flaskuserpass@localhost/flaskdb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
